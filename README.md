@@ -1,12 +1,12 @@
 # conditional
-Creating categories via R basics
+#Creating categories via R basics
 
 ###---------------------------------------------------------------------------###
 
 da <- data.frame(cl = rnorm(1e6), la = rnorm(1e6), col_4 = c("vem"), val_4= 0)
 head(da)
 
-## classification 4
+## classification in 4 colors
 
    da$col_4 <- as.factor(as.character(ifelse( da$cl <= .5 & da$la <= .5,  "blue", 
                     ifelse(da$cl <= .5 & da$la > .5, "green", 
